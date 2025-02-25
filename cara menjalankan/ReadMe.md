@@ -1,29 +1,97 @@
--- Di sarankan menggunakan node.js versi terbaru
--- Pastikan install NPM atau yarn
--- Menggunakan Database MySQL
--- Postman (opsional) untuk tes API
--- Di sini saya menggunakan sweetalert2 sebagai alert atau notifikasi
+# README
 
--- Buat file .env di backend dengan setup sebagai berikut :
+##  Persyaratan
+Pastikan Anda sudah menginstal dan menyiapkan hal-hal berikut sebelum menjalankan proyek:
+
+- **Node.js** (disarankan versi terbaru)
+- **NPM atau Yarn** (untuk mengelola dependensi)
+- **Database MySQL** (digunakan untuk penyimpanan data)
+- **Postman** *(opsional, untuk pengujian API)*
+- **SweetAlert2** (digunakan sebagai notifikasi di frontend)
+
+---
+
+##  Konfigurasi Lingkungan
+### **Backend (`.env`)**
+Buat file `.env` di dalam folder backend dengan isi berikut:
+```env
 PORT=3000
 DB_HOST=localhost
 DB_USER=root
-DB_PASS="PASSWORD YANG ANDA MILIKI"
+DB_PASS="PASSWORD ANDA"
 DB_NAME=tes-bolde
 JWT_SECRET=supersecretkey
 FRONTEND_URL=http://localhost:3000
+```
 
--- Buat file .env.local di frontend dengan isi sebagai berikut :
+### **Frontend (`.env.local`)**
+Buat file `.env.local` di dalam folder frontend dengan isi berikut:
+```env
 NEXT_PUBLIC_API_URL=http://localhost:3000
+```
 
--- Export database MySQL yang sudah saya kirim dengan nama tes-bolde
--- atau buat baru di PHP MyAdmin dengan struktur sebagau berikut : - buat tabel users - buat 4 kolom - kolom id (INT, PRIMARY, AUTO INCREMENT) - kolom username (VARCHAR 255) - kolom email (VARCHAR 255 dengan CONSTRAINT unique_email) - kolom password (VARCHAR 255)
+---
 
--- Buka 2 Terminal untuk backend dan frontend
-(backend menggunakan port 3000, frontend meggunakan port 3001)
--- Jalankan backend terlebih dahulu dan jalankan server dengan printah node server.js
--- Lanjut di Frontend jalankan perintah npm run dev
--- Test dengan url localhost::3001 di browser
--- Opsional, tes di Postman dengan endpoint sebagai berikut : - POST /register untuk register - POST /login untuk login user - GET /user untuk melihat data user dan JWT nya - PUT /user/update untuk mengedit profile
+##  Database MySQL
+Anda dapat **mengimpor database** `tes-bolde.sql` yang sudah dikirim atau membuat database baru di **phpMyAdmin** dengan struktur sebagai berikut:
 
-CATATAN PENTING : dalam pembuatannya ini, tentu saya menggunakan bantuan AI, di sini saya menggunakan ChatGPT untuk efisiensi waktu dan adaptasi dikarenakan saya memang lebih sering menggunakan PHP dan Laravel sehari-hari 😊😁😊😁🙏🙏
+1. **Buat database baru** bernama `tes-bolde`
+2. **Buat tabel `users`** dengan struktur berikut:
+   - `id` (INT, PRIMARY, AUTO_INCREMENT)
+   - `username` (VARCHAR 255)
+   - `email` (VARCHAR 255, dengan `CONSTRAINT unique_email`)
+   - `password` (VARCHAR 255)
+
+---
+
+##  Menjalankan Proyek
+### ** Menjalankan Backend**
+1. **Buka terminal** dan pindah ke folder backend:
+   ```sh
+   cd backend
+   ```
+2. **Install dependensi:**
+   ```sh
+   npm install
+   ```
+3. **Jalankan server backend:**
+   ```sh
+   node server.js
+   ```
+
+### ** Menjalankan Frontend**
+1. **Buka terminal lain** dan pindah ke folder frontend:
+   ```sh
+   cd frontend
+   ```
+2. **Install dependensi:**
+   ```sh
+   npm install
+   ```
+3. **Jalankan server frontend:**
+   ```sh
+   npm run dev
+   ```
+4. **Akses aplikasi di browser:**
+   ```
+   http://localhost:3001
+   ```
+
+---
+
+##  Pengujian API di Postman
+Gunakan **Postman** atau tools lainnya untuk menguji endpoint berikut:
+
+| Method | Endpoint      | Deskripsi |
+|--------|-------------|-----------|
+| **POST** | `/register`   | Registrasi user baru |
+| **POST** | `/login`      | Login user dan mendapatkan token JWT |
+| **GET**  | `/user`       | Melihat data user (dengan token JWT) |
+| **PUT**  | `/user/update` | Mengedit profil user (dengan token JWT) |
+
+---
+
+##  **Catatan Penting**
+Dalam pembuatan proyek ini, saya menggunakan **bantuan AI (ChatGPT)** untuk efisiensi waktu dan adaptasi, karena saya lebih sering menggunakan **PHP & Laravel** dalam keseharian saya. 😊😁🙏
+
+
