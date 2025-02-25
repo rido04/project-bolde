@@ -1,0 +1,17 @@
+# Ignore node_modules di frontend & backend
+node_modules/
+auth-backend/node_modules/
+auth-frontend/node_modules/
+
+# Ignore environment variables
+.env
+auth-backend/.env
+auth-frontend/.env.local
+
+# Ignore build & dependencies yang tidak perlu di-track
+.next/
+out/
+dist/
+.DS_Store
+package-lock.json
+yarn.lock
