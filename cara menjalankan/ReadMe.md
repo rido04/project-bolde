@@ -1,19 +1,23 @@
 # README
 
-##  Persyaratan
+## Persyaratan
+
 Pastikan Anda sudah menginstal dan menyiapkan hal-hal berikut sebelum menjalankan proyek:
 
 - **Node.js** (disarankan versi terbaru)
 - **NPM atau Yarn** (untuk mengelola dependensi)
 - **Database MySQL** (digunakan untuk penyimpanan data)
-- **Postman** *(opsional, untuk pengujian API)*
+- **Postman** _(opsional, untuk pengujian API)_
 - **SweetAlert2** (digunakan sebagai notifikasi di frontend)
 
 ---
 
-##  Konfigurasi
+## Konfigurasi
+
 ### **Backend (`.env`)**
+
 Buat file `.env` di dalam folder backend dengan isi berikut:
+
 ```env
 PORT=3000(sesuaikan dengan port yang ingin anda gunakan)
 DB_HOST=localhost
@@ -25,14 +29,17 @@ FRONTEND_URL=http://localhost:3000
 ```
 
 ### **Frontend (`.env.local`)**
+
 Buat file `.env.local` di dalam folder frontend dengan isi berikut:
+
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:3000(sesuaikan dengan port backend)
 ```
 
 ---
 
-##  Database MySQL
+## Database MySQL
+
 Anda dapat **mengimpor database** `tes-bolde.sql` yang sudah dikirim atau membuat database baru di **phpMyAdmin** dengan struktur sebagai berikut:
 
 1. **Buat database baru** bernama `tes-bolde`
@@ -44,8 +51,10 @@ Anda dapat **mengimpor database** `tes-bolde.sql` yang sudah dikirim atau membua
 
 ---
 
-##  Menjalankan Proyek
+## Menjalankan Proyek
+
 ### ** Menjalankan Backend**
+
 1. **Buka terminal** dan pindah ke folder backend:
    ```sh
    cd backend
@@ -60,6 +69,7 @@ Anda dapat **mengimpor database** `tes-bolde.sql` yang sudah dikirim atau membua
    ```
 
 ### ** Menjalankan Frontend**
+
 1. **Buka terminal lain** dan pindah ke folder frontend:
    ```sh
    cd frontend
@@ -68,9 +78,9 @@ Anda dapat **mengimpor database** `tes-bolde.sql` yang sudah dikirim atau membua
    ```sh
    npm install
    ```
-3. **Jalankan server frontend:**
+3. **Jalankan server frontend: (biasanya akan memakai port 3001 secara otomatis jika tidak dipakai)**
    ```sh
-   npm run dev (biasnya akan memakai port 3001 secara otomatis jika tidak dipakai)
+   npm run dev
    ```
 4. **Akses aplikasi di browser:**
    ```
@@ -79,19 +89,19 @@ Anda dapat **mengimpor database** `tes-bolde.sql` yang sudah dikirim atau membua
 
 ---
 
-##  Pengujian API di Postman
+## Pengujian API di Postman
+
 Gunakan **Postman** atau tools lainnya untuk menguji endpoint berikut:
 
-| Method | Endpoint      | Deskripsi |
-|--------|-------------|-----------|
-| **POST** | `/register`   | Registrasi user baru |
-| **POST** | `/login`      | Login user dan mendapatkan token JWT |
-| **GET**  | `/user`       | Melihat data user (dengan token JWT) |
+| Method   | Endpoint       | Deskripsi                               |
+| -------- | -------------- | --------------------------------------- |
+| **POST** | `/register`    | Registrasi user baru                    |
+| **POST** | `/login`       | Login user dan mendapatkan token JWT    |
+| **GET**  | `/user`        | Melihat data user (dengan token JWT)    |
 | **PUT**  | `/user/update` | Mengedit profil user (dengan token JWT) |
 
 ---
 
-##  **Catatan Penting**
+## **Catatan Penting**
+
 Dalam pembuatan proyek ini, saya menggunakan **bantuan AI (ChatGPT)** untuk efisiensi waktu dan adaptasi, karena saya lebih sering menggunakan **PHP & Laravel** dalam keseharian saya. 😊😁🙏
-
-
