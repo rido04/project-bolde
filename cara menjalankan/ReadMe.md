@@ -11,11 +11,11 @@ Pastikan Anda sudah menginstal dan menyiapkan hal-hal berikut sebelum menjalanka
 
 ---
 
-##  Konfigurasi Lingkungan
+##  Konfigurasi
 ### **Backend (`.env`)**
 Buat file `.env` di dalam folder backend dengan isi berikut:
 ```env
-PORT=3000
+PORT=3000(sesuaikan dengan port yang ingin anda gunakan)
 DB_HOST=localhost
 DB_USER=root
 DB_PASS="PASSWORD ANDA"
@@ -27,7 +27,7 @@ FRONTEND_URL=http://localhost:3000
 ### **Frontend (`.env.local`)**
 Buat file `.env.local` di dalam folder frontend dengan isi berikut:
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:3000
+NEXT_PUBLIC_API_URL=http://localhost:3000(sesuaikan dengan port backend)
 ```
 
 ---
@@ -70,7 +70,7 @@ Anda dapat **mengimpor database** `tes-bolde.sql` yang sudah dikirim atau membua
    ```
 3. **Jalankan server frontend:**
    ```sh
-   npm run dev
+   npm run dev (biasnya akan memakai port 3001 secara otomatis jika tidak dipakai)
    ```
 4. **Akses aplikasi di browser:**
    ```
